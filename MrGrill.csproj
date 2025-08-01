@@ -81,8 +81,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CashRegisterController.cs" />
+    <Compile Include="Controllers\ComboDetailController.cs" />
+    <Compile Include="Controllers\IngredientController.cs" />
+    <Compile Include="Controllers\InventoryMovementController.cs" />
+    <Compile Include="Controllers\PriceHistoryController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ProductIngredientController.cs" />
+    <Compile Include="Controllers\PromotionController.cs" />
+    <Compile Include="Controllers\PromotionProductController.cs" />
+    <Compile Include="Controllers\SaleController.cs" />
+    <Compile Include="Controllers\SaleDetailController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Data\Connection.cs" />
+    <Compile Include="Models\CashRegister.cs" />
+    <Compile Include="Models\ComboDetail.cs" />
+    <Compile Include="Models\Ingredient.cs" />
+    <Compile Include="Models\InventoryMovement.cs" />
+    <Compile Include="Models\PriceHistory.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductIngredient.cs" />
+    <Compile Include="Models\Promotion.cs" />
+    <Compile Include="Models\PromotionProduct.cs" />
+    <Compile Include="Models\Sale.cs" />
+    <Compile Include="Models\SaleDetail.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="SupporterFunctions\SecurePasswordHasher.cs" />
     <Compile Include="Vistas\login.cs">
