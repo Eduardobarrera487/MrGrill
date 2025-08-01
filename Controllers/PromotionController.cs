@@ -70,8 +70,13 @@ namespace MrGrill.Controllers
                             name = reader.GetString("Nombre"),
                             description = reader.GetString("Descripcion"),
                             type = reader.GetString("Tipo"),
-                            discountPercentage = reader.IsDBNull(reader.GetOrdinal("PorcentajeDescuento")) ? null : reader.GetDecimal("PorcentajeDescuento"),
-                            discountAmount = reader.IsDBNull(reader.GetOrdinal("MontoDescuento")) ? null : reader.GetDecimal("MontoDescuento"),
+                            discountPercentage = reader.IsDBNull(reader.GetOrdinal("PorcentajeDescuento"))
+                     ? (decimal?)null
+                     : reader.GetDecimal("PorcentajeDescuento"),
+
+                            discountAmount = reader.IsDBNull(reader.GetOrdinal("MontoDescuento"))
+                 ? (decimal?)null
+                 : reader.GetDecimal("MontoDescuento"),
                             startDate = reader.GetDateTime("FechaInicio"),
                             endDate = reader.GetDateTime("FechaFin"),
                             isActive = reader.GetBoolean("Activa")
