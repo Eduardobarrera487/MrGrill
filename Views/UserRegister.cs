@@ -32,6 +32,8 @@ namespace MrGrill.Vistas
             cmbEstado.Items.Add("Inactivo");
             cmbRol.Items.Add("Administrador");
             cmbRol.Items.Add("Usuario");
+            this.WindowState = FormWindowState.Maximized;
+
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
