@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MrGrill.Controllers;
+using MrGrill.Views;
 
 namespace MrGrill
 {
@@ -24,16 +25,19 @@ namespace MrGrill
             UserRegister newUserRegister = new UserRegister();
             this.Hide();
             newUserRegister.ShowDialog();
+
         }
 
         private void login_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            MrGrillHomeScreen homeScreen = new MrGrillHomeScreen();
+            homeScreen.Show();
+            this.Hide();
         }
     }
 }
