@@ -55,9 +55,10 @@
             // SideBarButton
             // 
             this.SideBarButton.Image = ((System.Drawing.Image)(resources.GetObject("SideBarButton.Image")));
-            this.SideBarButton.Location = new System.Drawing.Point(8, 8);
+            this.SideBarButton.Location = new System.Drawing.Point(6, 6);
+            this.SideBarButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SideBarButton.Name = "SideBarButton";
-            this.SideBarButton.Size = new System.Drawing.Size(57, 56);
+            this.SideBarButton.Size = new System.Drawing.Size(43, 46);
             this.SideBarButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SideBarButton.TabIndex = 0;
             this.SideBarButton.TabStop = false;
@@ -72,30 +73,32 @@
             this.SideBarLayaout.Controls.Add(this.panel3);
             this.SideBarLayaout.Controls.Add(this.panel4);
             this.SideBarLayaout.Controls.Add(this.panel5);
-            this.SideBarLayaout.Location = new System.Drawing.Point(0, 3);
+            this.SideBarLayaout.Location = new System.Drawing.Point(0, 2);
+            this.SideBarLayaout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SideBarLayaout.Name = "SideBarLayaout";
-            this.SideBarLayaout.Padding = new System.Windows.Forms.Padding(5);
-            this.SideBarLayaout.Size = new System.Drawing.Size(235, 1028);
+            this.SideBarLayaout.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SideBarLayaout.Size = new System.Drawing.Size(176, 1044);
             this.SideBarLayaout.TabIndex = 1;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnCaja);
-            this.panel1.Location = new System.Drawing.Point(8, 87);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 20, 3, 10);
+            this.panel1.Location = new System.Drawing.Point(6, 70);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 16, 2, 8);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel1.Size = new System.Drawing.Size(218, 74);
+            this.panel1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.panel1.Size = new System.Drawing.Size(164, 60);
             this.panel1.TabIndex = 2;
             // 
             // btnCaja
             // 
             this.btnCaja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnCaja.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCaja.Location = new System.Drawing.Point(-12, -17);
+            this.btnCaja.Location = new System.Drawing.Point(-9, -14);
+            this.btnCaja.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCaja.Name = "btnCaja";
-            this.btnCaja.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnCaja.Size = new System.Drawing.Size(251, 109);
+            this.btnCaja.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnCaja.Size = new System.Drawing.Size(188, 89);
             this.btnCaja.TabIndex = 3;
             this.btnCaja.Text = "Caja";
             this.btnCaja.UseVisualStyleBackColor = false;
@@ -104,21 +107,22 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.btnOrdenes);
-            this.panel2.Location = new System.Drawing.Point(8, 191);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 20, 3, 10);
+            this.panel2.Location = new System.Drawing.Point(6, 154);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 16, 2, 8);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(218, 74);
+            this.panel2.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.panel2.Size = new System.Drawing.Size(164, 60);
             this.panel2.TabIndex = 4;
             // 
             // btnOrdenes
             // 
             this.btnOrdenes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnOrdenes.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrdenes.Location = new System.Drawing.Point(-12, -17);
+            this.btnOrdenes.Location = new System.Drawing.Point(-9, -14);
+            this.btnOrdenes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrdenes.Name = "btnOrdenes";
-            this.btnOrdenes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnOrdenes.Size = new System.Drawing.Size(251, 109);
+            this.btnOrdenes.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnOrdenes.Size = new System.Drawing.Size(188, 89);
             this.btnOrdenes.TabIndex = 3;
             this.btnOrdenes.Text = "Ordenes";
             this.btnOrdenes.UseVisualStyleBackColor = false;
@@ -126,21 +130,22 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.btnProductos);
-            this.panel3.Location = new System.Drawing.Point(8, 295);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 20, 3, 10);
+            this.panel3.Location = new System.Drawing.Point(6, 238);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 16, 2, 8);
             this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel3.Size = new System.Drawing.Size(218, 74);
+            this.panel3.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.panel3.Size = new System.Drawing.Size(164, 60);
             this.panel3.TabIndex = 5;
             // 
             // btnProductos
             // 
             this.btnProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnProductos.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProductos.Location = new System.Drawing.Point(-12, -17);
+            this.btnProductos.Location = new System.Drawing.Point(-9, -14);
+            this.btnProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnProductos.Size = new System.Drawing.Size(251, 109);
+            this.btnProductos.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnProductos.Size = new System.Drawing.Size(188, 89);
             this.btnProductos.TabIndex = 3;
             this.btnProductos.Text = "Productos";
             this.btnProductos.UseVisualStyleBackColor = false;
@@ -148,21 +153,22 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.btnIngredientes);
-            this.panel4.Location = new System.Drawing.Point(8, 399);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 20, 3, 10);
+            this.panel4.Location = new System.Drawing.Point(6, 322);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 16, 2, 8);
             this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel4.Size = new System.Drawing.Size(218, 74);
+            this.panel4.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.panel4.Size = new System.Drawing.Size(164, 60);
             this.panel4.TabIndex = 6;
             // 
             // btnIngredientes
             // 
             this.btnIngredientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnIngredientes.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngredientes.Location = new System.Drawing.Point(-12, -17);
+            this.btnIngredientes.Location = new System.Drawing.Point(-9, -14);
+            this.btnIngredientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnIngredientes.Name = "btnIngredientes";
-            this.btnIngredientes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnIngredientes.Size = new System.Drawing.Size(251, 109);
+            this.btnIngredientes.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnIngredientes.Size = new System.Drawing.Size(188, 89);
             this.btnIngredientes.TabIndex = 3;
             this.btnIngredientes.Text = "Ingredientes";
             this.btnIngredientes.UseVisualStyleBackColor = false;
@@ -170,11 +176,11 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.btnCombos);
-            this.panel5.Location = new System.Drawing.Point(8, 503);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 20, 3, 10);
+            this.panel5.Location = new System.Drawing.Point(6, 406);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 16, 2, 8);
             this.panel5.Name = "panel5";
-            this.panel5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel5.Size = new System.Drawing.Size(218, 74);
+            this.panel5.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.panel5.Size = new System.Drawing.Size(164, 60);
             this.panel5.TabIndex = 7;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
@@ -182,10 +188,11 @@
             // 
             this.btnCombos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnCombos.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCombos.Location = new System.Drawing.Point(-12, -17);
+            this.btnCombos.Location = new System.Drawing.Point(-9, -14);
+            this.btnCombos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCombos.Name = "btnCombos";
-            this.btnCombos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnCombos.Size = new System.Drawing.Size(251, 109);
+            this.btnCombos.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnCombos.Size = new System.Drawing.Size(188, 89);
             this.btnCombos.TabIndex = 3;
             this.btnCombos.Text = "Combos";
             this.btnCombos.UseVisualStyleBackColor = false;
@@ -196,10 +203,11 @@
             // 
             // MrGrillHomeScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.SideBarLayaout);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MrGrillHomeScreen";
             this.Text = "MrGrillHomeScreen";
             this.Load += new System.EventHandler(this.MrGrillHomeScreen_Load);
