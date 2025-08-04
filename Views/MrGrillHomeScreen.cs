@@ -74,21 +74,32 @@ namespace MrGrill.Views
 
         private void btnCaja_Click(object sender, EventArgs e)
         {
-            if (cashRegisterView == null)
-            {
-                cashRegisterView = new CashRegisterView();
-                cashRegisterView.FormClosed += cashRegisterView_FormClosed;
-                cashRegisterView.MdiParent = this; // Set the parent form for MDI
-                cashRegisterView.Show();
-            }else
-            {
-                cashRegisterView.Activate(); // Bring the existing form to the front
-            }
+            
+            OpenChildForm(new CashRegisterView());
         }
 
         private void cashRegisterView_FormClosed(object sender, FormClosedEventArgs e)
         {
             throw new NotImplementedException();
         }
+        //funcion para cerrar o desplegar el formulario hijo
+        private Form activeForm = null;
+        private void OpenChildForm(Form childForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
     }
+
+
 }
