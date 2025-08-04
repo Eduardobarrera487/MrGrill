@@ -117,34 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="SideBarButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAASQSURBVHhe7Z1L
-        ixxVGIY/jAs1Xv+AGo0bcfwBongBr0hcjQpeQBAjkygiGAzZJEYRHS/EmuoQMAkmgjAqaHShSy8bNcRd
-        XHhZJ9EIMmpmVsf3tJ8wVB+oqu52uk7neeBhNnXe0/CeqUtXU2UAAAAAAAAAAAAAAAAAAABwdhPesotD
-        aY+GBftA/iD/lAEnauwgdhE7eSR25HWNj7DTzlX4M/JXmfoQ2B1PyafDoq3z+kaj/19f2KeVSbDrFvZ5
-        6NllXuNwaHd/ocK+HwjHPCztWJi39V5ne7SKPkwGYz6Wtuh1tkOD7xkIwzwt7Q6vtTkaeHQgCHP1W6+1
-        GTrxuzoRgjnbs6u83nq0y9iaDMF8LW3O661HA14fCMC8LW3e661HGx9OhmC+qlOvtx5d/pXJEMzXwgqv
-        tx5tvCMZgjm73eutR1cBNyUCMGdLu8HrrSfeSNCgkwMhmKsnwk47x+tthg4D2xJBmKfPeq3NCW/Y+Rr4
-        cyUI8/PHcNDO81rboXOBaxXwRyUQ83FJe/IZr3M4dPJwq4JOV4Kx+/4Wenaz1zgaWgQbFfhVZQLsrl/E
-        +zle3/jQ7mSTwj+Wf6+aDLvhX/Ijea/X9f8R9tkFYa9dpz3DXVoUszhBYwexC3Xi9QAAAAAAAAAAAAAA
-        AAAAALQm7LNLwoI9KHfLg6G0RZygsYPYRWEPxG68pvGjCTZoonflikz9IgUn74oWxeGw16702saDQuf6
-        4elJsXsuq7PNXt9oKOy1SjjmYmmveI3DoZAtA6GYl4U96XW2Ix5HFLA8EIi5udLq8TD/oYHxhC8ViPl5
-        yGtthl/qcdI3PS7HJ756vfX0rynTQZirhc16vfVowEsDAZi7u73eerTxgcpgzN/9Xm89cePKYMzd0t72
-        euvRxi8mQzBnd3m99XASOIW2OgmML4ngMnCaXA777SKvtxk6DPC00GmxsHe81ubwVfDUeCbsscu91nZo
-        5TyWCMS8fMLrHI54SzERijlY2Mte42hoEWxWIIeDfDwjH/f6xoMCr5CHJAuhuy7HE76hj/lN8EvE+zXR
-        C/p7QHuH9I8VcW3892v7XepjtvWlHgAAAAAAAAAAAAAAAAAAwCrCvK0Phc3Iu/v3oXGSxg5m1uSlUWHB
-        7pNHJK+N656xkyNaDJu8rvER9tg1Cv961WTYZUv7Um70+kZDK+o2hf4+MAl23dPq7havcTh4eXT2LoWe
-        Xe91tsNfH/9LJRDz86ehXh+vY8jziTDM0+e81maERVunQacqIZivJ2KnXm898b3ziRDM2dJu9Hrr0dnj
-        jmQI5ux2r7cebdyrDMb8XfB669HugodDTJvq1OutRwN4Qvj0+arXW49Wy9ZEAOZsaXNebz3+eJh0EOZp
-        YRu83mZo0HcDIZir33itzdGKuTMRhHl6u9faDh034gMIUoGYj+95ne3p//KntGOJUMzDoyP/Uig+dkRB
-        n1SCsft+Ft60S73G0ejfHCrsKYVyg6j7npRbWt38aUp/b1DYw5rgfXlcLsnUh8C1M3ZwvH++VtpDPCgK
-        AAAAAAAAAAAAAAAAAADgbMfsHzpKUIFWyHyrAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <metadata name="SideBarTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>
