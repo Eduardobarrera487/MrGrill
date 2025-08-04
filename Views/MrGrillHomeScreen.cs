@@ -45,7 +45,7 @@ namespace MrGrill.Views
 
         private void SideBarTimer_Tick(object sender, EventArgs e)
         {
-            SideBarTimer.Interval = 5; // Adjust the interval for smoother animation
+            SideBarTimer.Interval = 2; // Adjust the interval for smoother animation
             if(isSidebarOpen)
             {
                 if (SideBarLayaout.Width > 70)
@@ -98,6 +98,11 @@ namespace MrGrill.Views
             panelChildForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void panelChildForm_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 
