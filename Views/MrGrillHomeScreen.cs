@@ -45,7 +45,7 @@ namespace MrGrill.Views
 
         private void SideBarTimer_Tick(object sender, EventArgs e)
         {
-            SideBarTimer.Interval = 5; // Adjust the interval for smoother animation
+            SideBarTimer.Interval = 2; // Adjust the interval for smoother animation
             if(isSidebarOpen)
             {
                 if (SideBarLayaout.Width > 70)
