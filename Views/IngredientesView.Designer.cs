@@ -46,7 +46,7 @@
             // rjTextBox1
             // 
             this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjTextBox1.BorderColor = System.Drawing.Color.Black;
             this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
             this.rjTextBox1.BorderRadius = 0;
             this.rjTextBox1.BorderSize = 2;
@@ -59,7 +59,7 @@
             this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.rjTextBox1.PasswordChar = false;
             this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "";
+            this.rjTextBox1.PlaceholderText = "Ingrediente";
             this.rjTextBox1.Size = new System.Drawing.Size(250, 31);
             this.rjTextBox1.TabIndex = 0;
             this.rjTextBox1.Texts = "";
