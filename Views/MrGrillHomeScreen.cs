@@ -99,6 +99,11 @@ namespace MrGrill.Views
             childForm.BringToFront();
             childForm.Show();
         }
+
+        private void btnIngredientes_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new IngredientesView());
+        }
     }
 
 

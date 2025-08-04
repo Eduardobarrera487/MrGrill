@@ -174,6 +174,7 @@
             this.btnIngredientes.TabIndex = 3;
             this.btnIngredientes.Text = "Ingredientes";
             this.btnIngredientes.UseVisualStyleBackColor = false;
+            this.btnIngredientes.Click += new System.EventHandler(this.btnIngredientes_Click);
             // 
             // panel5
             // 
