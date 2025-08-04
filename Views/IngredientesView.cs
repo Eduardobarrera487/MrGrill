@@ -16,5 +16,10 @@ namespace MrGrill.Views
         {
             InitializeComponent();
         }
+
+        private void IngredientesView_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

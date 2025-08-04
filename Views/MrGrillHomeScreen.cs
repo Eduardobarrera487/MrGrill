@@ -100,9 +100,9 @@ namespace MrGrill.Views
             childForm.Show();
         }
 
-        private void panelChildForm_Paint(object sender, PaintEventArgs e)
+        private void btnIngredientes_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new IngredientesView());
         }
     }
 
