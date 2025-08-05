@@ -15,6 +15,7 @@ namespace MrGrill.Views
     {
         bool isSidebarOpen = false;
         CashRegisterView cashRegisterView; 
+       
 
         public MrGrillHomeScreen()
         {
@@ -103,6 +104,11 @@ namespace MrGrill.Views
         private void btnIngredientes_Click(object sender, EventArgs e)
         {
             OpenChildForm(new IngredientesView());
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ProductsVIew());
         }
     }
 

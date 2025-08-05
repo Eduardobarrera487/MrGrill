@@ -15,5 +15,7 @@ namespace MrGrill.Models
         public string category { get; set; }
         public bool isCombo { get; set; }
         public bool isActive { get; set; }
+        
+        public string photo { get; set; }
     }
 }

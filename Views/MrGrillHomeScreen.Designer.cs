@@ -68,6 +68,7 @@
             // SideBarLayaout
             // 
             this.SideBarLayaout.BackColor = System.Drawing.Color.White;
+            this.SideBarLayaout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SideBarLayaout.Controls.Add(this.SideBarButton);
             this.SideBarLayaout.Controls.Add(this.panel1);
             this.SideBarLayaout.Controls.Add(this.panel2);
@@ -78,7 +79,7 @@
             this.SideBarLayaout.Location = new System.Drawing.Point(0, 0);
             this.SideBarLayaout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SideBarLayaout.Name = "SideBarLayaout";
-            this.SideBarLayaout.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.SideBarLayaout.Padding = new System.Windows.Forms.Padding(5);
             this.SideBarLayaout.Size = new System.Drawing.Size(235, 838);
             this.SideBarLayaout.TabIndex = 1;
             // 
@@ -151,6 +152,7 @@
             this.btnProductos.TabIndex = 3;
             this.btnProductos.Text = "Productos";
             this.btnProductos.UseVisualStyleBackColor = false;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // panel4
             // 
@@ -209,7 +211,7 @@
             this.panelChildForm.BackColor = System.Drawing.Color.White;
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(235, 0);
-            this.panelChildForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelChildForm.Margin = new System.Windows.Forms.Padding(4);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1450, 838);
             this.panelChildForm.TabIndex = 2;
