@@ -20,8 +20,8 @@ namespace MrGrill.Controllers
             try
             {
                 string insert = @"INSERT INTO Productos 
-                                (Nombre, Descripcion, Precio, Categoria, EsCombo, Activo) 
-                                VALUES (@name, @description, @price, @category, @isCombo, @isActive)";
+                        (Nombre, Descripcion, Precio, Categoria, EsCombo, Activo, Foto) 
+                        VALUES (@name, @description, @price, @category, @isCombo, @isActive, @photo)";
 
                 using (MySqlCommand command = new MySqlCommand(insert, connection.GetConnection()))
                 {
@@ -31,6 +31,7 @@ namespace MrGrill.Controllers
                     command.Parameters.AddWithValue("@category", product.category);
                     command.Parameters.AddWithValue("@isCombo", product.isCombo);
                     command.Parameters.AddWithValue("@isActive", product.isActive);
+                    command.Parameters.AddWithValue("@photo", product.photo);
 
                     command.ExecuteNonQuery();
                 }
@@ -70,7 +71,9 @@ namespace MrGrill.Controllers
                             price = reader.GetDecimal("Precio"),
                             category = reader.GetString("Categoria"),
                             isCombo = reader.GetBoolean("EsCombo"),
-                            isActive = reader.GetBoolean("Activo")
+                            isActive = reader.GetBoolean("Activo"),
+                            photo = reader["Foto"] != DBNull.Value ? reader.GetString("Foto") : null 
+
                         };
 
                         products.Add(product);
@@ -98,9 +101,9 @@ namespace MrGrill.Controllers
             try
             {
                 string update = @"UPDATE Productos 
-                                SET Nombre = @name, Descripcion = @description, Precio = @price, 
-                                    Categoria = @category, EsCombo = @isCombo, Activo = @isActive 
-                                WHERE IdProducto = @id";
+                        SET Nombre = @name, Descripcion = @description, Precio = @price, 
+                            Categoria = @category, EsCombo = @isCombo, Activo = @isActive, Foto = @photo
+                        WHERE IdProducto = @id";
 
                 using (MySqlCommand command = new MySqlCommand(update, connection.GetConnection()))
                 {
@@ -110,10 +113,12 @@ namespace MrGrill.Controllers
                     command.Parameters.AddWithValue("@category", product.category);
                     command.Parameters.AddWithValue("@isCombo", product.isCombo);
                     command.Parameters.AddWithValue("@isActive", product.isActive);
+                    command.Parameters.AddWithValue("@photo", product.photo); // 👈 NUEVO
                     command.Parameters.AddWithValue("@id", product.id);
 
                     command.ExecuteNonQuery();
                 }
+
 
                 return true;
             }

@@ -117,6 +117,7 @@
     <Compile Include="Models\SaleDetail.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="SupporterFunctions\SecurePasswordHasher.cs" />
+    <Compile Include="SupporterFunctions\UIFeatures.cs" />
     <Compile Include="Views\CashRegisterView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +143,12 @@
     </Compile>
     <Compile Include="Views\MrGrillHomeScreen.Designer.cs">
       <DependentUpon>MrGrillHomeScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductsVIew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ProductsVIew.Designer.cs">
+      <DependentUpon>ProductsVIew.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserRegister.cs">
       <SubType>Form</SubType>
@@ -173,6 +180,9 @@
     </Compile>
     <EmbeddedResource Include="Views\MrGrillHomeScreen.resx">
       <DependentUpon>MrGrillHomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ProductsVIew.resx">
+      <DependentUpon>ProductsVIew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserRegister.resx">
       <DependentUpon>UserRegister.cs</DependentUpon>
