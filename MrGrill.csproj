@@ -92,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\CashRegisterController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ComboDetailController.cs" />
     <Compile Include="Controllers\IngredientController.cs" />
     <Compile Include="Controllers\InventoryMovementController.cs" />
@@ -105,6 +106,7 @@
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Data\Connection.cs" />
     <Compile Include="Models\CashRegister.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\ComboDetail.cs" />
     <Compile Include="Models\Ingredient.cs" />
     <Compile Include="Models\InventoryMovement.cs" />
