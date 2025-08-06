@@ -3,9 +3,6 @@ using MrGrill.Models;
 using MySqlConnector;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MrGrill.Controllers
@@ -54,7 +51,7 @@ namespace MrGrill.Controllers
 
             try
             {
-                string query = "SELECT * FROM Ingredientes";
+                string query = "SELECT * FROM Ingredientes ORDER BY IdIngrediente DESC";
 
                 using (MySqlCommand command = new MySqlCommand(query, connection.GetConnection()))
                 using (var reader = command.ExecuteReader())
@@ -66,8 +63,8 @@ namespace MrGrill.Controllers
                             id = reader.GetInt32("IdIngrediente"),
                             name = reader.GetString("Nombre"),
                             unit = reader.GetString("Unidad"),
-                            currentStock = reader.GetDecimal("StockActual"),
-                            minimumStock = reader.GetDecimal("StockMinimo")
+                            currentStock = reader.GetInt32("StockActual"),
+                            minimumStock = reader.GetInt32("StockMinimo")
                         });
                     }
                 }
@@ -85,19 +82,25 @@ namespace MrGrill.Controllers
             }
         }
 
-        public bool UpdateIngredientStock(int id, decimal newStock)
+        public bool UpdateIngredient(Ingredient ingredient)
         {
             Connection connection = new Connection();
             connection.OpenConnection();
 
             try
             {
-                string update = "UPDATE Ingredientes SET StockActual = @newStock WHERE IdIngrediente = @id";
+                string update = @"UPDATE Ingredientes 
+                                  SET Nombre = @name, Unidad = @unit, 
+                                      StockActual = @currentStock, StockMinimo = @minimumStock
+                                  WHERE IdIngrediente = @id";
 
                 using (MySqlCommand command = new MySqlCommand(update, connection.GetConnection()))
                 {
-                    command.Parameters.AddWithValue("@newStock", newStock);
-                    command.Parameters.AddWithValue("@id", id);
+                    command.Parameters.AddWithValue("@name", ingredient.name);
+                    command.Parameters.AddWithValue("@unit", ingredient.unit);
+                    command.Parameters.AddWithValue("@currentStock", ingredient.currentStock);
+                    command.Parameters.AddWithValue("@minimumStock", ingredient.minimumStock);
+                    command.Parameters.AddWithValue("@id", ingredient.id);
 
                     command.ExecuteNonQuery();
                 }
@@ -106,7 +109,7 @@ namespace MrGrill.Controllers
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error updating ingredient stock: " + ex.Message);
+                MessageBox.Show("Error updating ingredient: " + ex.Message);
                 return false;
             }
             finally
