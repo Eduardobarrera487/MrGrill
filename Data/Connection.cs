@@ -9,8 +9,8 @@ namespace MrGrill.Data
     public class Connection
     {
         private String server = "sql5.freesqldatabase.com";
-        private String userId = "sql5792464";
-        private String password = "k4pj2IFU1f";
+        private String userId = "sql5793767";
+        private String password = "55wHSbTfvK";
 
         private MySqlConnection connection;
         public Connection()
