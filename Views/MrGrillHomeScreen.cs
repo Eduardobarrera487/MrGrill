@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MrGrill.SupporterFunctions;
 using MrGrill.Views;
 
 namespace MrGrill.Views
@@ -27,6 +28,14 @@ namespace MrGrill.Views
         private void MrGrillHomeScreen_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+            UIFeatures.AgregarHoverEfecto(btnCaja, Color.White, Color.FromArgb(255, 128, 0));
+            UIFeatures.AgregarHoverEfecto(btnCombos, Color.White, Color.FromArgb(255, 128, 0));
+            UIFeatures.AgregarHoverEfecto(btnIngredientes, Color.White, Color.FromArgb(255, 128, 0));
+            UIFeatures.AgregarHoverEfecto(btnProductos, Color.White, Color.FromArgb(255, 128, 0));
+            UIFeatures.AgregarHoverEfecto(btnCategorias, Color.White, Color.FromArgb(255, 128, 0));
+            UIFeatures.AgregarHoverEfecto(btnOrdenes, Color.White, Color.FromArgb(255, 128, 0));
+
+
         }
 
         private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
@@ -109,6 +118,21 @@ namespace MrGrill.Views
         private void btnProductos_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ProductsVIew());
+        }
+
+        private void panelChildForm_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCaja_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelChildForm_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 

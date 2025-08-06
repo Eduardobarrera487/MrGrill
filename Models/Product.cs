@@ -12,7 +12,7 @@ namespace MrGrill.Models
         public string name { get; set; }
         public string description { get; set; }
         public decimal price { get; set; }
-        public string category { get; set; }
+        public int category { get; set; }
         public bool isCombo { get; set; }
         public bool isActive { get; set; }
         

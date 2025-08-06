@@ -43,6 +43,19 @@ namespace MrGrill.SupporterFunctions
             boton.Region = new Region(path);
         }
 
-        
+        public static void AgregarHoverEfecto(Button boton, Color colorNormal, Color colorHover)
+        {
+            boton.BackColor = colorNormal;
+
+            boton.MouseEnter += (s, e) =>
+            {
+                boton.BackColor = colorHover;
+            };
+
+            boton.MouseLeave += (s, e) =>
+            {
+                boton.BackColor = colorNormal;
+            };
+        }
     }
 }
