@@ -26,10 +26,6 @@ namespace MrGrill.Views
         private string photoUrl = "";
         private int? productoEditandoId = null; // null = nuevo producto
 
-
-
-
-
         private void btnPhoto_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -55,7 +51,8 @@ namespace MrGrill.Views
                     name = txtProductName.Text.Trim(),
                     description = txtDescription.Text.Trim(),
                     price = nPadPrice.Value,
-                    category = cmbCategory.SelectedItem?.ToString() ?? "",
+                    category = ((Category)cmbCategory.SelectedItem)?.Id ?? 0,
+
                     isCombo = cmbCombo.SelectedItem?.ToString() == "Sí",
                     isActive = rbuttonActive.Checked,
                     photo = photoUrl
@@ -92,7 +89,9 @@ namespace MrGrill.Views
 
         private void ProductsVIew_Load(object sender, EventArgs e)
         {
-            cmbCategory.Items.AddRange(new string[] { "Hamburguesas", "Bebidas", "Acompañamientos", "Postres", "Extras", "Chunks", "Nachos", "Quesadillas", "Res", "Salchipapa", "Wraps" });
+            CategoryController categoryController = new CategoryController();
+            List<Category> categorias = categoryController.GetCategories();
+            cmbCategory.DataSource = categorias;
             cmbCombo.Items.AddRange(new string[] { "Sí", "No" });
             txtSearchProduct.Text = "";
             txtSearchProduct.Width = 200;
@@ -134,7 +133,8 @@ namespace MrGrill.Views
             txtProductName.Text = producto.name;
             txtDescription.Text = producto.description;
             nPadPrice.Value = producto.price;
-            cmbCategory.SelectedItem = producto.category;
+            cmbCategory.SelectedItem = ((List<Category>)cmbCategory.DataSource)
+    .FirstOrDefault(c => c.Id == producto.category); ;
             cmbCombo.SelectedItem = producto.isCombo ? "Sí" : "No";
             rbuttonActive.Checked = producto.isActive;
             photoUrl = producto.photo;
@@ -163,13 +163,16 @@ namespace MrGrill.Views
 
             ProductController controller = new ProductController();
             List<Product> productos = controller.GetAllProducts();
+            List<Category> categories = new CategoryController().GetCategories();
 
             // Filtro por nombre, descripción o categoría
             var filtrados = productos.Where(p =>
-                p.name.IndexOf(texto, StringComparison.OrdinalIgnoreCase) >= 0 ||
-                p.description.IndexOf(texto, StringComparison.OrdinalIgnoreCase) >= 0 ||
-                p.category.IndexOf(texto, StringComparison.OrdinalIgnoreCase) >= 0
-            ).ToList();
+    p.name.IndexOf(texto, StringComparison.OrdinalIgnoreCase) >= 0 ||
+    p.description.IndexOf(texto, StringComparison.OrdinalIgnoreCase) >= 0 ||
+    categories.FirstOrDefault(c => c.Id == p.category)?.Name
+        ?.IndexOf(texto, StringComparison.OrdinalIgnoreCase) >= 0
+).ToList();
+
 
             // Renderizar los productos filtrados
             foreach (var producto in filtrados)
@@ -225,9 +228,13 @@ namespace MrGrill.Views
                 ForeColor = ColorTranslator.FromHtml("#1ABC9C")
             };
 
+            string nombreCategoria = new CategoryController()
+    .GetCategories()
+    .FirstOrDefault(c => c.Id == producto.category)?.Name ?? "Sin categoría";
+
             Label lblCategoria = new Label
             {
-                Text = producto.category,
+                Text = nombreCategoria,
                 Font = new Font("Segoe UI", 9, FontStyle.Regular),
                 Location = new Point(15, 190),
                 AutoSize = true,

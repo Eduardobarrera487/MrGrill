@@ -20,7 +20,7 @@ namespace MrGrill.Controllers
             try
             {
                 string insert = @"INSERT INTO Productos 
-                        (Nombre, Descripcion, Precio, Categoria, EsCombo, Activo, Foto) 
+                        (Nombre, Descripcion, Precio, IdCategoria, EsCombo, Activo, Foto) 
                         VALUES (@name, @description, @price, @category, @isCombo, @isActive, @photo)";
 
                 using (MySqlCommand command = new MySqlCommand(insert, connection.GetConnection()))
@@ -57,7 +57,19 @@ namespace MrGrill.Controllers
 
             try
             {
-                string query = "SELECT * FROM Productos";
+                string query = "SELECT " +
+                    " p.IdProducto,   " +
+                    "p.Nombre,  " +
+                    "p.Descripcion,  " +
+                    "p.Precio,    " +
+                    "p.IdCategoria,   " +
+                    "c.Nombre AS NombreCategoria,   " +
+                    "p.EsCombo,   " +
+                    "p.Activo,   " +
+                    "p.Foto   " +
+                    "FROM Productos p " +
+                    "INNER JOIN Categorias c " +
+                    "ON p.IdCategoria = c.IdCategoria ";
                 using (MySqlCommand command = new MySqlCommand(query, connection.GetConnection()))
                 using (var reader = command.ExecuteReader())
                 {
@@ -69,12 +81,15 @@ namespace MrGrill.Controllers
                             name = reader.GetString("Nombre"),
                             description = reader.GetString("Descripcion"),
                             price = reader.GetDecimal("Precio"),
-                            category = reader.GetString("Categoria"),
+                            category = reader.GetInt32("IdCategoria"),
                             isCombo = reader.GetBoolean("EsCombo"),
                             isActive = reader.GetBoolean("Activo"),
                             photo = reader["Foto"] != DBNull.Value ? reader.GetString("Foto") : null 
 
                         };
+
+                        string nombreCategoria = reader["NombreCategoria"].ToString();
+
 
                         products.Add(product);
                     }
@@ -102,7 +117,7 @@ namespace MrGrill.Controllers
             {
                 string update = @"UPDATE Productos 
                         SET Nombre = @name, Descripcion = @description, Precio = @price, 
-                            Categoria = @category, EsCombo = @isCombo, Activo = @isActive, Foto = @photo
+                            IdCategoria = @category, EsCombo = @isCombo, Activo = @isActive, Foto = @photo
                         WHERE IdProducto = @id";
 
                 using (MySqlCommand command = new MySqlCommand(update, connection.GetConnection()))
