@@ -126,6 +126,12 @@
     <Compile Include="Views\CashRegisterView.Designer.cs">
       <DependentUpon>CashRegisterView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\CategoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CategoryView.Designer.cs">
+      <DependentUpon>CategoryView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\IngredienteModal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </Compile>
     <EmbeddedResource Include="Views\CashRegisterView.resx">
       <DependentUpon>CashRegisterView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CategoryView.resx">
+      <DependentUpon>CategoryView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\IngredienteModal.resx">
       <DependentUpon>IngredienteModal.cs</DependentUpon>

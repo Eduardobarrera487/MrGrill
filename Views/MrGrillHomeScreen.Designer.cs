@@ -38,28 +38,30 @@
             this.btnOrdenes = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnProductos = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btnCategorias = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnIngredientes = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnCombos = new System.Windows.Forms.Button();
             this.SideBarTimer = new System.Windows.Forms.Timer(this.components);
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.btnCategorias = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.SideBarButton)).BeginInit();
             this.SideBarLayaout.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // SideBarButton
             // 
             this.SideBarButton.Image = ((System.Drawing.Image)(resources.GetObject("SideBarButton.Image")));
-            this.SideBarButton.Location = new System.Drawing.Point(8, 7);
+            this.SideBarButton.Location = new System.Drawing.Point(0, 0);
             this.SideBarButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SideBarButton.Name = "SideBarButton";
             this.SideBarButton.Size = new System.Drawing.Size(57, 57);
@@ -72,7 +74,7 @@
             // 
             this.SideBarLayaout.BackColor = System.Drawing.Color.White;
             this.SideBarLayaout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SideBarLayaout.Controls.Add(this.SideBarButton);
+            this.SideBarLayaout.Controls.Add(this.panel7);
             this.SideBarLayaout.Controls.Add(this.panel1);
             this.SideBarLayaout.Controls.Add(this.panel2);
             this.SideBarLayaout.Controls.Add(this.panel3);
@@ -90,7 +92,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btnCaja);
-            this.panel1.Location = new System.Drawing.Point(8, 86);
+            this.panel1.Location = new System.Drawing.Point(8, 90);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 20, 3, 10);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
@@ -115,7 +117,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.btnOrdenes);
-            this.panel2.Location = new System.Drawing.Point(8, 190);
+            this.panel2.Location = new System.Drawing.Point(8, 194);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 20, 3, 10);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
@@ -138,7 +140,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.btnProductos);
-            this.panel3.Location = new System.Drawing.Point(8, 294);
+            this.panel3.Location = new System.Drawing.Point(8, 298);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 20, 3, 10);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
@@ -159,10 +161,34 @@
             this.btnProductos.UseVisualStyleBackColor = false;
             this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.btnCategorias);
+            this.panel6.Location = new System.Drawing.Point(8, 402);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 20, 3, 10);
+            this.panel6.Name = "panel6";
+            this.panel6.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.panel6.Size = new System.Drawing.Size(219, 74);
+            this.panel6.TabIndex = 8;
+            // 
+            // btnCategorias
+            // 
+            this.btnCategorias.BackColor = System.Drawing.Color.White;
+            this.btnCategorias.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategorias.Location = new System.Drawing.Point(-15, -19);
+            this.btnCategorias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCategorias.Name = "btnCategorias";
+            this.btnCategorias.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnCategorias.Size = new System.Drawing.Size(251, 110);
+            this.btnCategorias.TabIndex = 3;
+            this.btnCategorias.Text = "Categorías";
+            this.btnCategorias.UseVisualStyleBackColor = false;
+            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.btnIngredientes);
-            this.panel4.Location = new System.Drawing.Point(8, 502);
+            this.panel4.Location = new System.Drawing.Point(8, 506);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 20, 3, 10);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
@@ -186,7 +212,7 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.btnCombos);
-            this.panel5.Location = new System.Drawing.Point(8, 606);
+            this.panel5.Location = new System.Drawing.Point(8, 610);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 20, 3, 10);
             this.panel5.Name = "panel5";
             this.panel5.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
@@ -223,28 +249,13 @@
             this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             this.panelChildForm.MouseEnter += new System.EventHandler(this.panelChildForm_MouseEnter);
             // 
-            // panel6
+            // panel7
             // 
-            this.panel6.Controls.Add(this.btnCategorias);
-            this.panel6.Location = new System.Drawing.Point(8, 398);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 20, 3, 10);
-            this.panel6.Name = "panel6";
-            this.panel6.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.panel6.Size = new System.Drawing.Size(219, 74);
-            this.panel6.TabIndex = 8;
-            // 
-            // btnCategorias
-            // 
-            this.btnCategorias.BackColor = System.Drawing.Color.White;
-            this.btnCategorias.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategorias.Location = new System.Drawing.Point(-15, -19);
-            this.btnCategorias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCategorias.Name = "btnCategorias";
-            this.btnCategorias.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnCategorias.Size = new System.Drawing.Size(251, 110);
-            this.btnCategorias.TabIndex = 3;
-            this.btnCategorias.Text = "Categorías";
-            this.btnCategorias.UseVisualStyleBackColor = false;
+            this.panel7.Controls.Add(this.SideBarButton);
+            this.panel7.Location = new System.Drawing.Point(8, 8);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(219, 59);
+            this.panel7.TabIndex = 0;
             // 
             // MrGrillHomeScreen
             // 
@@ -262,9 +273,10 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -287,5 +299,6 @@
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnCategorias;
+        private System.Windows.Forms.Panel panel7;
     }
 }

@@ -134,6 +134,11 @@ namespace MrGrill.Views
         {
 
         }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new CategoryView());
+        }
     }
 
 
