@@ -26,29 +26,10 @@ namespace MrGrill.Views
             ingredientController = new IngredientController();
             this.Load += IngredientesView_Load;
 
-            // 📌 Panel superior
-            Panel topPanel = new Panel
-            {
-                Dock = DockStyle.Top,
-                Height = 50,
-                BackColor = Color.White
-            };
+            Panel topPanel = new Panel { Dock = DockStyle.Top, Height = 50, BackColor = Color.White };
+            Panel bottomPanel = new Panel { Dock = DockStyle.Bottom, Height = 40, BackColor = Color.WhiteSmoke };
+            Panel mainPanel = new Panel { Dock = DockStyle.Fill };
 
-            // 📌 Panel inferior para paginación
-            Panel bottomPanel = new Panel
-            {
-                Dock = DockStyle.Bottom,
-                Height = 40,
-                BackColor = Color.WhiteSmoke
-            };
-
-            // 📋 Panel central para DataGridView
-            Panel mainPanel = new Panel
-            {
-                Dock = DockStyle.Fill
-            };
-
-            // 🔍 Búsqueda
             txtBuscar = new TextBox
             {
                 Text = "Buscar ingrediente...",
@@ -82,7 +63,6 @@ namespace MrGrill.Views
             };
             topPanel.Controls.Add(txtBuscar);
 
-            // 🏷 Título
             Label lblTitulo = new Label
             {
                 Text = "Gestión de Ingredientes",
@@ -96,7 +76,6 @@ namespace MrGrill.Views
                 lblTitulo.Location = new Point((topPanel.Width / 2) - (lblTitulo.Width / 2), 12);
             };
 
-            // 📌 Botones a la derecha
             btnAgregar = CrearIconoBoton("Agregar", IconChar.Plus, "#4CAF50");
             btnAgregar.Click += (s, e) =>
             {
@@ -116,7 +95,6 @@ namespace MrGrill.Views
             topPanel.Controls.Add(btnAgregar);
             topPanel.Controls.Add(btnEditar);
             topPanel.Controls.Add(btnEliminar);
-
             topPanel.Resize += (s, e) =>
             {
                 int spacing = 5;
@@ -125,20 +103,10 @@ namespace MrGrill.Views
                 btnAgregar.Location = new Point(btnEditar.Left - btnAgregar.Width - spacing, 10);
             };
 
-            // 📋 DataGridView
-            dataGridView1 = new DataGridView
-            {
-                Dock = DockStyle.Fill
-            };
+            dataGridView1 = new DataGridView { Dock = DockStyle.Fill };
             mainPanel.Controls.Add(dataGridView1);
 
-            // 📌 Botones de paginación
-            Button btnAnterior = new Button
-            {
-                Text = "Anterior",
-                Size = new Size(80, 30),
-                Location = new Point(10, 5)
-            };
+            Button btnAnterior = new Button { Text = "Anterior", Size = new Size(80, 30), Location = new Point(10, 5) };
             btnAnterior.Click += (s, e) =>
             {
                 if (currentPage > 1)
@@ -148,12 +116,7 @@ namespace MrGrill.Views
                 }
             };
 
-            Button btnSiguiente = new Button
-            {
-                Text = "Siguiente",
-                Size = new Size(80, 30),
-                Location = new Point(100, 5)
-            };
+            Button btnSiguiente = new Button { Text = "Siguiente", Size = new Size(80, 30), Location = new Point(100, 5) };
             btnSiguiente.Click += (s, e) =>
             {
                 int totalPages = (int)Math.Ceiling((double)allIngredients.Count / pageSize);
@@ -164,7 +127,6 @@ namespace MrGrill.Views
                 }
             };
 
-            // 📌 Etiqueta de paginación
             lblPaginacion = new Label
             {
                 AutoSize = true,
@@ -176,10 +138,14 @@ namespace MrGrill.Views
             bottomPanel.Controls.Add(btnSiguiente);
             bottomPanel.Controls.Add(lblPaginacion);
 
-            // ⚠️ Orden correcto
             this.Controls.Add(mainPanel);
             this.Controls.Add(bottomPanel);
             this.Controls.Add(topPanel);
+
+            dataGridView1.DataBindingComplete += (s, e) =>
+            {
+                AplicarColoresStock();
+            };
         }
 
         private void IngredientesView_Load(object sender, EventArgs e)
@@ -197,21 +163,16 @@ namespace MrGrill.Views
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-
-            // 🎨 Encabezado
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#FF5000");
             dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             dataGridView1.ColumnHeadersHeight = 40;
-
-            // 🎨 Filas normales
             dataGridView1.DefaultCellStyle.BackColor = Color.White;
             dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
+            dataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Regular);
             dataGridView1.DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#E69600");
             dataGridView1.DefaultCellStyle.SelectionForeColor = Color.Black;
-
-            // 🎨 Alternancia cuando no hay alerta
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(255, 239, 213);
         }
 
@@ -234,55 +195,46 @@ namespace MrGrill.Views
             dataGridView1.Columns.Clear();
             dataGridView1.AutoGenerateColumns = false;
 
-            // 🆔 Id oculto
-            var colId = new DataGridViewTextBoxColumn
-            {
-                Name = "id",
-                DataPropertyName = "id",
-                Visible = false
-            };
-            dataGridView1.Columns.Add(colId);
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn { Name = "id", DataPropertyName = "id", Visible = false });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn { Name = "Nombre", DataPropertyName = "Nombre", HeaderText = "Nombre" });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn { Name = "Unidad", DataPropertyName = "Unidad", HeaderText = "Unidad" });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn { Name = "StockActual", DataPropertyName = "StockActual", HeaderText = "Stock Actual" });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn { Name = "StockMinimo", DataPropertyName = "StockMinimo", HeaderText = "Stock Mínimo" });
 
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                Name = "Nombre",
-                DataPropertyName = "Nombre",
-                HeaderText = "Nombre"
-            });
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                Name = "Unidad",
-                DataPropertyName = "Unidad",
-                HeaderText = "Unidad"
-            });
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                Name = "StockActual",
-                DataPropertyName = "StockActual",
-                HeaderText = "StockActual"
-            });
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                Name = "StockMinimo",
-                DataPropertyName = "StockMinimo",
-                HeaderText = "StockMinimo"
-            });
+            // Nueva columna de estado
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn { Name = "NivelStock", HeaderText = "Nivel de Stock" });
 
-            // 📌 Aseguramos que el DataSource tiene las propiedades con el mismo nombre que las columnas
-            dataGridView1.DataSource = ingredientesPaginados
-                .Select(i => new
-                {
-                    id = i.id,
-                    Nombre = i.name,
-                    Unidad = i.unit,
-                    StockActual = i.currentStock,
-                    StockMinimo = i.minimumStock
-                })
-                .ToList();
+            dataGridView1.Rows.Clear();
 
-            dataGridView1.Refresh();
+            foreach (var i in ingredientesPaginados)
+            {
+                int rowIndex = dataGridView1.Rows.Add();
+                var row = dataGridView1.Rows[rowIndex];
 
-            // 🎨 Colorear celdas según stock
+                row.Cells["id"].Value = i.id;
+                row.Cells["Nombre"].Value = i.name;
+                row.Cells["Unidad"].Value = i.unit;
+                row.Cells["StockActual"].Value = i.currentStock;
+                row.Cells["StockMinimo"].Value = i.minimumStock;
+
+                // Determinar nivel
+                string nivel = (i.currentStock >= i.minimumStock) ? "Aceptable" : "Bajo";
+                row.Cells["NivelStock"].Value = nivel;
+
+                // Colorear solo la celda "Nivel de Stock"
+                if (nivel == "Aceptable")
+                    row.Cells["NivelStock"].Style.BackColor = Color.FromArgb(198, 239, 206); // Verde
+                else
+                    row.Cells["NivelStock"].Style.BackColor = Color.FromArgb(255, 199, 206); // Rojo
+            }
+
+            int totalPages = (int)Math.Ceiling((double)allIngredients.Count / pageSize);
+            lblPaginacion.Text = $"Página {currentPage} de {totalPages}";
+        }
+
+
+        private void AplicarColoresStock()
+        {
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 if (row.Cells["StockActual"].Value != null && row.Cells["StockMinimo"].Value != null)
@@ -292,24 +244,17 @@ namespace MrGrill.Views
 
                     Color colorFila;
                     if (stockActual > stockMinimo)
-                        colorFila = Color.FromArgb(198, 239, 206); // Verde
+                        colorFila = Color.FromArgb(198, 239, 206);
                     else if (stockActual == stockMinimo)
-                        colorFila = Color.FromArgb(255, 235, 156); // Amarillo
+                        colorFila = Color.FromArgb(255, 235, 156);
                     else
-                        colorFila = Color.FromArgb(255, 199, 206); // Rojo
+                        colorFila = Color.FromArgb(255, 199, 206);
 
                     foreach (DataGridViewCell cell in row.Cells)
-                    {
                         cell.Style.BackColor = colorFila;
-                    }
                 }
             }
-
-            // 📌 Paginación
-            int totalPages = (int)Math.Ceiling((double)allIngredients.Count / pageSize);
-            lblPaginacion.Text = $"Página {currentPage} de {totalPages}";
         }
-
 
         private IconButton CrearIconoBoton(string texto, IconChar icono, string colorFondoHex)
         {
@@ -358,10 +303,7 @@ namespace MrGrill.Views
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["id"].Value);
-                var confirm = MessageBox.Show("¿Seguro que deseas eliminar este ingrediente?",
-                                              "Confirmar eliminación",
-                                              MessageBoxButtons.YesNo,
-                                              MessageBoxIcon.Warning);
+                var confirm = MessageBox.Show("¿Seguro que deseas eliminar este ingrediente?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (confirm == DialogResult.Yes)
                 {
                     ingredientController.DeleteIngredient(id);
