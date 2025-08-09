@@ -75,6 +75,63 @@ namespace MrGrill.Controllers
             }
         }
 
+      public bool Update(Category category)
+        {
+            Connection connection = new Connection();
+            connection.OpenConnection();
+
+            try
+            {
+                string update = @"UPDATE Categorias SET Nombre = @name WHERE IdCategoria = @id";
+
+                using (MySqlCommand command = new MySqlCommand(update, connection.GetConnection()))
+                {
+                    command.Parameters.AddWithValue("@name", category.Name);
+                    command.Parameters.AddWithValue("@id", category.Id);
+                    command.ExecuteNonQuery();
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating category: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                connection.CloseConnection();
+            }
+        }
+
+        public bool Delete(int categoryId)
+        {
+            Connection connection = new Connection();
+            connection.OpenConnection();
+
+            try
+            {
+                string delete = "UPDATE Categorias SET Estado = 'Inactivo' WHERE IdCategoria = @id";
+
+                using (MySqlCommand command = new MySqlCommand(delete, connection.GetConnection()))
+                {
+                    command.Parameters.AddWithValue("@id", categoryId);
+                    command.ExecuteNonQuery();
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error deleting category: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                connection.CloseConnection();
+            }
+        }
+
         public List<Category> GetCategories()
         {
             List <Category > categories = new List<Category>();
@@ -84,7 +141,7 @@ namespace MrGrill.Controllers
 
             try
             {
-                string query = "SELECT * FROM Categorias";
+                string query = "SELECT * FROM Categorias Where Estado = 'Activo'";
                 using (MySqlCommand command = new MySqlCommand(query, connection.GetConnection()))
                 using (var reader = command.ExecuteReader())
                 {

@@ -90,7 +90,7 @@ namespace MrGrill.Views
         private void ProductsVIew_Load(object sender, EventArgs e)
         {
             CategoryController categoryController = new CategoryController();
-            List<Category> categorias = categoryController.GetCategories();
+            List<MrGrill.Models.Category> categorias = categoryController.GetCategories();
             cmbCategory.DataSource = categorias;
             cmbCombo.Items.AddRange(new string[] { "Sí", "No" });
             txtSearchProduct.Text = "";
@@ -163,7 +163,7 @@ namespace MrGrill.Views
 
             ProductController controller = new ProductController();
             List<Product> productos = controller.GetAllProducts();
-            List<Category> categories = new CategoryController().GetCategories();
+            List<MrGrill.Models.Category> categories = new CategoryController().GetCategories();
 
             // Filtro por nombre, descripción o categoría
             var filtrados = productos.Where(p =>
