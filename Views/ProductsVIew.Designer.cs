@@ -32,28 +32,28 @@
             this.label1 = new System.Windows.Forms.Label();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.panelForm = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnAddProduct = new RJCodeAdvance.RJControls.RJButton();
-            this.cmbCategory = new RJCodeAdvance.RJControls.RJComboBox();
-            this.nPadPrice = new System.Windows.Forms.NumericUpDown();
-            this.cmbCombo = new RJCodeAdvance.RJControls.RJComboBox();
-            this.rbuttonActive = new System.Windows.Forms.RadioButton();
-            this.rButtonInactive = new System.Windows.Forms.RadioButton();
-            this.pictureBoxPhoto = new System.Windows.Forms.PictureBox();
-            this.btnPhoto = new RJCodeAdvance.RJControls.RJButton();
-            this.flowLayoutProducts = new System.Windows.Forms.FlowLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtProductName = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
+            this.txtProductName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnPhoto = new RJCodeAdvance.RJControls.RJButton();
+            this.pictureBoxPhoto = new System.Windows.Forms.PictureBox();
+            this.rButtonInactive = new System.Windows.Forms.RadioButton();
+            this.rbuttonActive = new System.Windows.Forms.RadioButton();
+            this.cmbCombo = new RJCodeAdvance.RJControls.RJComboBox();
+            this.nPadPrice = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbCategory = new RJCodeAdvance.RJControls.RJComboBox();
+            this.btnAddProduct = new RJCodeAdvance.RJControls.RJButton();
+            this.flowLayoutProducts = new System.Windows.Forms.FlowLayoutPanel();
             this.txtSearchProduct = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.rjDropdownMenu1 = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.panelForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nPadPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nPadPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -98,131 +98,63 @@
             this.panelForm.Size = new System.Drawing.Size(538, 718);
             this.panelForm.TabIndex = 7;
             // 
-            // label2
+            // txtDescription
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.label2.Location = new System.Drawing.Point(80, 31);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(389, 31);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "AÑADIR UN NUEVO PRODUCTO";
+            this.txtDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDescription.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.Location = new System.Drawing.Point(203, 165);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(202, 49);
+            this.txtDescription.TabIndex = 42;
             // 
-            // btnAddProduct
+            // txtProductName
             // 
-            this.btnAddProduct.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAddProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnAddProduct.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnAddProduct.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnAddProduct.BorderRadius = 5;
-            this.btnAddProduct.BorderSize = 0;
-            this.btnAddProduct.FlatAppearance.BorderSize = 0;
-            this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddProduct.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProduct.ForeColor = System.Drawing.Color.White;
-            this.btnAddProduct.Location = new System.Drawing.Point(182, 640);
-            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(225, 39);
-            this.btnAddProduct.TabIndex = 25;
-            this.btnAddProduct.Text = "Guardar cambios";
-            this.btnAddProduct.TextColor = System.Drawing.Color.White;
-            this.btnAddProduct.UseVisualStyleBackColor = false;
-            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
+            this.txtProductName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtProductName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductName.Location = new System.Drawing.Point(203, 103);
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.Size = new System.Drawing.Size(202, 27);
+            this.txtProductName.TabIndex = 41;
             // 
-            // cmbCategory
+            // label4
             // 
-            this.cmbCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbCategory.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbCategory.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.cmbCategory.BorderSize = 1;
-            this.cmbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cmbCategory.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbCategory.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.cmbCategory.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cmbCategory.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbCategory.Location = new System.Drawing.Point(203, 281);
-            this.cmbCategory.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbCategory.Size = new System.Drawing.Size(202, 30);
-            this.cmbCategory.TabIndex = 28;
-            this.cmbCategory.Tag = "";
-            this.cmbCategory.Texts = "Categoría";
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.label4.Location = new System.Drawing.Point(63, 165);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(117, 28);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "Descripción";
             // 
-            // nPadPrice
+            // label3
             // 
-            this.nPadPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nPadPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nPadPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nPadPrice.Location = new System.Drawing.Point(203, 231);
-            this.nPadPrice.Name = "nPadPrice";
-            this.nPadPrice.Size = new System.Drawing.Size(202, 26);
-            this.nPadPrice.TabIndex = 32;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.label3.Location = new System.Drawing.Point(90, 100);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(87, 28);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "Nombre";
             // 
-            // cmbCombo
+            // label6
             // 
-            this.cmbCombo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbCombo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbCombo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.cmbCombo.BorderSize = 1;
-            this.cmbCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cmbCombo.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbCombo.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.cmbCombo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cmbCombo.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbCombo.Location = new System.Drawing.Point(205, 331);
-            this.cmbCombo.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbCombo.Name = "cmbCombo";
-            this.cmbCombo.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbCombo.Size = new System.Drawing.Size(200, 30);
-            this.cmbCombo.TabIndex = 33;
-            this.cmbCombo.Tag = "";
-            this.cmbCombo.Texts = "¿Es combo?";
-            // 
-            // rbuttonActive
-            // 
-            this.rbuttonActive.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.rbuttonActive.AutoSize = true;
-            this.rbuttonActive.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbuttonActive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.rbuttonActive.Location = new System.Drawing.Point(203, 382);
-            this.rbuttonActive.Name = "rbuttonActive";
-            this.rbuttonActive.Size = new System.Drawing.Size(73, 24);
-            this.rbuttonActive.TabIndex = 34;
-            this.rbuttonActive.TabStop = true;
-            this.rbuttonActive.Text = "Activo";
-            this.rbuttonActive.UseVisualStyleBackColor = true;
-            // 
-            // rButtonInactive
-            // 
-            this.rButtonInactive.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.rButtonInactive.AutoSize = true;
-            this.rButtonInactive.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rButtonInactive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.rButtonInactive.Location = new System.Drawing.Point(311, 382);
-            this.rButtonInactive.Name = "rButtonInactive";
-            this.rButtonInactive.Size = new System.Drawing.Size(84, 24);
-            this.rButtonInactive.TabIndex = 35;
-            this.rButtonInactive.TabStop = true;
-            this.rButtonInactive.Text = "Inactivo";
-            this.rButtonInactive.UseVisualStyleBackColor = true;
-            // 
-            // pictureBoxPhoto
-            // 
-            this.pictureBoxPhoto.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.pictureBoxPhoto.BackColor = System.Drawing.Color.White;
-            this.pictureBoxPhoto.Location = new System.Drawing.Point(177, 412);
-            this.pictureBoxPhoto.Name = "pictureBoxPhoto";
-            this.pictureBoxPhoto.Size = new System.Drawing.Size(239, 146);
-            this.pictureBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxPhoto.TabIndex = 36;
-            this.pictureBoxPhoto.TabStop = false;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.label6.Location = new System.Drawing.Point(107, 233);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 28);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "Precio";
             // 
             // btnPhoto
             // 
@@ -246,6 +178,132 @@
             this.btnPhoto.UseVisualStyleBackColor = false;
             this.btnPhoto.Click += new System.EventHandler(this.btnPhoto_Click);
             // 
+            // pictureBoxPhoto
+            // 
+            this.pictureBoxPhoto.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pictureBoxPhoto.BackColor = System.Drawing.Color.White;
+            this.pictureBoxPhoto.Location = new System.Drawing.Point(182, 427);
+            this.pictureBoxPhoto.Name = "pictureBoxPhoto";
+            this.pictureBoxPhoto.Size = new System.Drawing.Size(239, 146);
+            this.pictureBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxPhoto.TabIndex = 36;
+            this.pictureBoxPhoto.TabStop = false;
+            // 
+            // rButtonInactive
+            // 
+            this.rButtonInactive.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.rButtonInactive.AutoSize = true;
+            this.rButtonInactive.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rButtonInactive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.rButtonInactive.Location = new System.Drawing.Point(311, 382);
+            this.rButtonInactive.Name = "rButtonInactive";
+            this.rButtonInactive.Size = new System.Drawing.Size(84, 24);
+            this.rButtonInactive.TabIndex = 35;
+            this.rButtonInactive.TabStop = true;
+            this.rButtonInactive.Text = "Inactivo";
+            this.rButtonInactive.UseVisualStyleBackColor = true;
+            // 
+            // rbuttonActive
+            // 
+            this.rbuttonActive.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.rbuttonActive.AutoSize = true;
+            this.rbuttonActive.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbuttonActive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.rbuttonActive.Location = new System.Drawing.Point(203, 382);
+            this.rbuttonActive.Name = "rbuttonActive";
+            this.rbuttonActive.Size = new System.Drawing.Size(73, 24);
+            this.rbuttonActive.TabIndex = 34;
+            this.rbuttonActive.TabStop = true;
+            this.rbuttonActive.Text = "Activo";
+            this.rbuttonActive.UseVisualStyleBackColor = true;
+            // 
+            // cmbCombo
+            // 
+            this.cmbCombo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbCombo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbCombo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cmbCombo.BorderSize = 1;
+            this.cmbCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cmbCombo.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbCombo.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cmbCombo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbCombo.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbCombo.Location = new System.Drawing.Point(205, 331);
+            this.cmbCombo.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbCombo.Name = "cmbCombo";
+            this.cmbCombo.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbCombo.Size = new System.Drawing.Size(200, 30);
+            this.cmbCombo.TabIndex = 33;
+            this.cmbCombo.Tag = "";
+            this.cmbCombo.Texts = "¿Es combo?";
+            // 
+            // nPadPrice
+            // 
+            this.nPadPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nPadPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nPadPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nPadPrice.Location = new System.Drawing.Point(203, 231);
+            this.nPadPrice.Name = "nPadPrice";
+            this.nPadPrice.Size = new System.Drawing.Size(202, 26);
+            this.nPadPrice.TabIndex = 32;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.label2.Location = new System.Drawing.Point(80, 31);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(389, 31);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "AÑADIR UN NUEVO PRODUCTO";
+            // 
+            // cmbCategory
+            // 
+            this.cmbCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbCategory.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbCategory.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cmbCategory.BorderSize = 1;
+            this.cmbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cmbCategory.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbCategory.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cmbCategory.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbCategory.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbCategory.Location = new System.Drawing.Point(203, 281);
+            this.cmbCategory.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbCategory.Name = "cmbCategory";
+            this.cmbCategory.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbCategory.Size = new System.Drawing.Size(202, 30);
+            this.cmbCategory.TabIndex = 28;
+            this.cmbCategory.Tag = "";
+            this.cmbCategory.Texts = "Categoría";
+            // 
+            // btnAddProduct
+            // 
+            this.btnAddProduct.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAddProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAddProduct.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAddProduct.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAddProduct.BorderRadius = 5;
+            this.btnAddProduct.BorderSize = 0;
+            this.btnAddProduct.FlatAppearance.BorderSize = 0;
+            this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddProduct.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProduct.ForeColor = System.Drawing.Color.White;
+            this.btnAddProduct.Location = new System.Drawing.Point(182, 640);
+            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(225, 39);
+            this.btnAddProduct.TabIndex = 25;
+            this.btnAddProduct.Text = "Guardar cambios";
+            this.btnAddProduct.TextColor = System.Drawing.Color.White;
+            this.btnAddProduct.UseVisualStyleBackColor = false;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
+            // 
             // flowLayoutProducts
             // 
             this.flowLayoutProducts.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -255,64 +313,6 @@
             this.flowLayoutProducts.Name = "flowLayoutProducts";
             this.flowLayoutProducts.Size = new System.Drawing.Size(865, 651);
             this.flowLayoutProducts.TabIndex = 8;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.label6.Location = new System.Drawing.Point(107, 233);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 28);
-            this.label6.TabIndex = 38;
-            this.label6.Text = "Precio";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.label3.Location = new System.Drawing.Point(90, 100);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 28);
-            this.label3.TabIndex = 39;
-            this.label3.Text = "Nombre";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.label4.Location = new System.Drawing.Point(63, 165);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 28);
-            this.label4.TabIndex = 40;
-            this.label4.Text = "Descripción";
-            // 
-            // txtProductName
-            // 
-            this.txtProductName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtProductName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProductName.Location = new System.Drawing.Point(203, 103);
-            this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(202, 27);
-            this.txtProductName.TabIndex = 41;
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDescription.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.Location = new System.Drawing.Point(203, 165);
-            this.txtDescription.Multiline = true;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(202, 49);
-            this.txtDescription.TabIndex = 42;
             // 
             // txtSearchProduct
             // 
@@ -363,8 +363,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.panelForm.ResumeLayout(false);
             this.panelForm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nPadPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nPadPrice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
