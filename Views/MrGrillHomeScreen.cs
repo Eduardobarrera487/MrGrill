@@ -85,7 +85,7 @@ namespace MrGrill.Views
         private void btnCaja_Click(object sender, EventArgs e)
         {
             
-            OpenChildForm(new CashRegisterView());
+            OpenChildForm(new CashRegisterView(1));
         }
 
         private void cashRegisterView_FormClosed(object sender, FormClosedEventArgs e)
@@ -93,22 +93,32 @@ namespace MrGrill.Views
             throw new NotImplementedException();
         }
         //funcion para cerrar o desplegar el formulario hijo
+        // campo para recordar el activo
         private Form activeForm = null;
+
         private void OpenChildForm(Form childForm)
         {
             if (activeForm != null)
-            {
                 activeForm.Close();
-            }
             activeForm = childForm;
+
+            panelChildForm.Padding = new Padding(0);
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
+
+            panelChildForm.Controls.Clear();
             panelChildForm.Controls.Add(childForm);
             panelChildForm.Tag = childForm;
-            childForm.BringToFront();
+
             childForm.Show();
+
+            // Llama una vez; el hijo internamente hará PostToUi si aún no tiene handle
+            if (childForm is CashRegisterView crv)
+                crv.NotifyHosted();
         }
+
+
 
         private void btnIngredientes_Click(object sender, EventArgs e)
         {
