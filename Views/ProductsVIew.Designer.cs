@@ -244,6 +244,11 @@
             this.nPadPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nPadPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nPadPrice.Location = new System.Drawing.Point(203, 231);
+            this.nPadPrice.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.nPadPrice.Name = "nPadPrice";
             this.nPadPrice.Size = new System.Drawing.Size(202, 26);
             this.nPadPrice.TabIndex = 32;
