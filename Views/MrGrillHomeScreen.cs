@@ -85,7 +85,7 @@ namespace MrGrill.Views
         private void btnCaja_Click(object sender, EventArgs e)
         {
             
-            OpenChildForm(new CashRegisterView(1));
+            OpenChildForm(new CashRegisterView());
         }
 
         private void cashRegisterView_FormClosed(object sender, FormClosedEventArgs e)
@@ -113,9 +113,7 @@ namespace MrGrill.Views
 
             childForm.Show();
 
-            // Llama una vez; el hijo internamente hará PostToUi si aún no tiene handle
-            if (childForm is CashRegisterView crv)
-                crv.NotifyHosted();
+            
         }
 
 
