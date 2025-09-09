@@ -59,7 +59,7 @@ namespace MrGrill.Vistas
                 MessageBox.Show("Usuario registrado exitosamente.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close(); // Close the registration form after successful registration
                 login loginForm = new login();
-                loginForm.ShowDialog(); // Show the login form after registration
+                loginForm.ShowDialog(); // Show the login form after registration 
             }
             catch (Exception ex)
             {
