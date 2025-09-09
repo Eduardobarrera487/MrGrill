@@ -92,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\CashRegisterController.cs" />
+    <Compile Include="Controllers\CashRegisterMovementsController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ComboDetailController.cs" />
     <Compile Include="Controllers\IngredientController.cs" />
@@ -137,6 +138,12 @@
     </Compile>
     <Compile Include="Views\CategoryView.Designer.cs">
       <DependentUpon>CategoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CombosView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CombosView.Designer.cs">
+      <DependentUpon>CombosView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\IngredienteModal.cs">
       <SubType>Form</SubType>
@@ -190,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CategoryView.resx">
       <DependentUpon>CategoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CombosView.resx">
+      <DependentUpon>CombosView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\IngredienteModal.resx">
       <DependentUpon>IngredienteModal.cs</DependentUpon>
