@@ -92,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\CashRegisterController.cs" />
+    <Compile Include="Controllers\CashRegisterMovementsController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ComboDetailController.cs" />
     <Compile Include="Controllers\IngredientController.cs" />
